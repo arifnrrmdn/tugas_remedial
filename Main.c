@@ -4,9 +4,8 @@
 
 int main()
 {
-    //  deklarasi
-    char nama[30];
-    int tipe,lama_pinjam,harga_sewa,sopir,biaya_sopir,lagi; 
+    char nama[30],lagi;
+    int tipe,lama_pinjam,harga_sewa,sopir,biaya_sopir; 
     
     do
     {
@@ -27,50 +26,50 @@ int main()
 
     switch(tipe){
         case 1:
-            puts("\nMobil yang dipilih = MINIBUS");
             biaya_sopir = 0;
             if(sopir == 1){
                 biaya_sopir = lama_pinjam * 200000;
             }
             harga_sewa = (lama_pinjam * 350000) + biaya_sopir;
-            printf("Nama Konsumen = %s\n",nama);
-            printf("Total = %d", harga_sewa);
+            printf("\nNama Konsumen       = %s\n",nama);
+            printf("Mobil yang dipilih  = MINIBUS");
+            printf("Total               = Rp.%d", harga_sewa);
             break;
         case 2:
-            puts("\nMobil yang dipilih = SEDAN");
             biaya_sopir = 0;
             if(sopir == 1){
                 biaya_sopir = lama_pinjam * 200000;
             }
             harga_sewa = (lama_pinjam * 400000) + biaya_sopir;
-            printf("Nama Konsumen = %s\n",nama);
-            printf("Total = %d", harga_sewa);
+            printf("\nNama Konsumen       = %s\n",nama);
+            printf("Mobil yang dipilih  = SEDAN\n");
+            printf("Total               = Rp.%d", harga_sewa);
             break;
         case 3:
-            puts("\nMobil yang dipilih = MPV");
             biaya_sopir = 0;
             if(sopir == 1){
                 biaya_sopir = lama_pinjam * 200000;
             }
             harga_sewa = (lama_pinjam * 450000) + biaya_sopir;
-            printf("Nama Konsumen = %s\n",nama);
-            printf("Total = %d", harga_sewa);
+            printf("\nNama Konsumen       = %s\n",nama);
+            printf("Mobil yang dipilih  = MPV");
+            printf("Total               = Rp.%d", harga_sewa);
             break;
         case 4:
-            puts("\nMobil yang dipilih = SUV");
             biaya_sopir = 0;
             if(sopir == 1){
                 biaya_sopir = lama_pinjam * 200000;
             }
             harga_sewa = (lama_pinjam * 550000);
-            printf("Nama Konsumen = %s\n",nama);
-            printf("Total =       %d", harga_sewa);
+            printf("\nNama Konsumen      = %s\n",nama);
+            printf("Mobil yang dipilih = SUV");
+            printf("Total              = Rp.%d", harga_sewa);
             break;
     }
 
-    printf("\n\nHitung lagi? 1=[YA] 0=[TIDAK]   : "); scanf("%d",&lagi);
+    printf("\n\nHitung lagi? y/n : "); scanf("%s",&lagi);
 
-    } while (lagi == 1);
+    } while (lagi == 'y' || lagi == 'Y');
     
     getch();
     return 0;
